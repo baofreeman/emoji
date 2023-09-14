@@ -1,55 +1,90 @@
 import { useRef, useState } from "react";
 
 function Plans() {
-  const [isHovered, setIshovered] = useState(false);
-  const handleMouseEnter = () => {
-    setIshovered(true);
-  };
+  const data = [
+    {
+      Phase1: {
+        name: "Phase 1",
+        des1: "0",
+        des2: "1",
+      },
+    },
 
-  const handleMouseLeave = () => {
-    setIshovered(false);
-  };
+    {
+      name: "Phase 2",
+      des1: "2",
+      des2: "3",
+    },
+
+    {
+      name: "Phase 3",
+      des1: "4",
+      des2: "5",
+    },
+
+    {
+      name: "Phase 4",
+      des1: "6",
+      des2: "7",
+    },
+  ];
+
   return (
-    <div className="max-w-full h-[600px] my-auto mt-[-1.25rem] flex justify-center items-center flex-col relative bg-blue clip-path-style z-1">
+    <div className="max-w-full my-auto mt-[-1.25rem] px-[100px] pb-[100px] sm:px-[12px] flex justify-center items-center flex-col sm:block relative bg-blue clip-path-style sm:clip-path-style-sm z-1">
       <h1 className="text-center pt-[20px] mx-auto font-wonderland text-5xl text-green drop-shadow-3xl">
         UPCOMING PLANS
       </h1>
-      <div className="flex flex-row items-center justify-center gap-6 mt-[40px] px-[100px] py-[50px]">
-        <div className="flex p-[100px] border-[3px] shadow-2xl rounded-md justify-center max-w-[380px] h-full items-center cursor-pointer bg-white relative drop-shadow-3xl">
-          <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="flex absolute justify-center items-center cursor-pointer w-full h-full t-0 b-0"
-          >
-            {!isHovered ? (
-              <h1 className="text-xl font-wonderland">Phase 1</h1>
-            ) : (
-              <ul className="list-disc">
-                <li>step</li>
-                <li>step</li>
-                <li>step</li>
-                <li>step</li>
-              </ul>
-            )}
+      <div className="flex max-w-full justify-center gap-[1.25rem] mb-[6.25rem] sm:flex-col">
+        <div className="w-full flex items-center justify-center sm:w-full sm:max-w-[26rem] sm:min-h-[15rem] min-h-[21.75rem] border-2 border-solid border-black rounded-md drop-shadow-3xl bg-white py-[2.375rem] px-[1.5625rem] relative overflow-hidden">
+          <div className="flex items-center justify-center cursor-pointer bg-white w-full h-full top-0 left-0">
+            <h1 className="text-3xl font-wonderland leading-[1.3rem]">
+              PHASE 1
+            </h1>
           </div>
+          <ul className="hidden">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
         </div>
 
-        <div className="flex p-[100px] border-[3px] shadow-2xl rounded-md justify-center max-w-[380px] h-full items-center cursor-pointer bg-white relative drop-shadow-3xl">
-          <div className="flex absolute justify-center items-center cursor-pointer w-full h-full t-0 b-0">
-            <h1 className="text-xl font-wonderland">Phase 1</h1>
+        <div className="w-full flex items-center justify-center sm:w-full sm:max-w-[26rem] sm:min-h-[15rem] min-h-[21.75rem] border-2 border-solid border-black rounded-md drop-shadow-3xl bg-white py-[2.375rem] px-[1.5625rem] relative overflow-hidden">
+          <div className="flex items-center justify-center cursor-pointer bg-white w-full h-full top-0 left-0">
+            <h1 className="text-3xl font-wonderland leading-[1.3rem]">
+              PHASE 1
+            </h1>
           </div>
+          <ul className="hidden">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
         </div>
 
-        <div className="flex p-[100px] border-[3px] shadow-2xl rounded-md justify-center max-w-[380px] h-full items-center cursor-pointer bg-white relative drop-shadow-3xl">
-          <div className="flex absolute justify-center items-center cursor-pointer w-full h-full t-0 b-0">
-            <h1 className="text-xl font-wonderland">Phase 1</h1>
+        <div className="w-full flex items-center justify-center sm:w-full sm:max-w-[26rem] sm:min-h-[15rem] min-h-[21.75rem] border-2 border-solid border-black rounded-md drop-shadow-3xl bg-white py-[2.375rem] px-[1.5625rem] relative overflow-hidden">
+          <div className="flex items-center justify-center cursor-pointer bg-white w-full h-full top-0 left-0">
+            <h1 className="text-3xl font-wonderland leading-[1.3rem]">
+              PHASE 1
+            </h1>
           </div>
+          <ul className="hidden">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
         </div>
 
-        <div className="flex p-[100px] border-[3px] shadow-2xl rounded-md justify-center max-w-[380px] h-full items-center cursor-pointer bg-white relative drop-shadow-3xl">
-          <div className="flex absolute justify-center items-center cursor-pointer w-full h-full t-0 b-0">
-            <h1 className="text-xl font-wonderland">Phase 1</h1>
+        <div className="w-full flex items-center justify-center sm:w-full sm:max-w-[26rem] sm:min-h-[15rem] min-h-[21.75rem] border-2 border-solid border-black rounded-md drop-shadow-3xl bg-white py-[2.375rem] px-[1.5625rem] relative overflow-hidden">
+          <div className="flex items-center justify-center cursor-pointer bg-white w-full h-full top-0 left-0">
+            <h1 className="text-3xl font-wonderland leading-[1.3rem]">
+              PHASE 1
+            </h1>
           </div>
+          <ul className="hidden">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
         </div>
       </div>
     </div>

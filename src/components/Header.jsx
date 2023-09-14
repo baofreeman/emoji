@@ -1,9 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 
 function Header() {
+  const [navbar, setNavbar] = useState("menu");
   const [scroll, setScroll] = useState();
   const [preScroll, setpreScroll] = useState();
   const navbarRef = useRef();
+  const navbarMobileRef = useRef();
+
+  const handleMenu = () => {
+    setNavbar("close");
+    navbarMobileRef.current.classList.remove("sm:hidden");
+  };
+
+  const handleClose = () => {
+    setNavbar("menu");
+    navbarMobileRef.current.classList.add("sm:hidden");
+  };
 
   useEffect(() => {
     setpreScroll(scroll);
@@ -26,7 +38,7 @@ function Header() {
     <div className="w-full m-auto bg-blue relative">
       <nav
         ref={navbarRef}
-        className="w-full m-auto fixed pt-10 top-0 right-0 left-0 z-10 bg-blue"
+        className="w-full m-auto fixed py-4 sm:py-[10px] top-0 right-0 left-0 z-10 bg-blue"
       >
         <div className="flex justify-center px-4">
           <div className="w-full flex justify-start items-center">
@@ -37,28 +49,51 @@ function Header() {
           <ul className="flex w-full justify-end sm:hidden">
             <li className="py-2 px-6 mx-2 text-center my-auto">
               <a className="text-lg font-wonderland text-white" href="#">
-                About <span className="sr-only">(current)</span>
+                About
               </a>
             </li>
 
             <li className="py-2 px-6 mx-2 text-center my-auto">
               <a className="text-lg font-wonderland text-white" href="#">
-                Tokenomisc <span className="sr-only">(current)</span>
+                Tokenomisc
               </a>
             </li>
 
             <li className="py-2 px-6 mx-2 text-center my-auto">
               <a className="text-lg font-wonderland text-white" href="#">
-                Roadmap <span className="sr-only">(current)</span>
+                Roadmap
               </a>
             </li>
 
             <li className="py-2 px-6 mx-2 text-center my-auto">
               <a className="text-lg font-wonderland text-white" href="#">
-                Product <span className="sr-only">(current)</span>
+                Product
               </a>
             </li>
           </ul>
+
+          <div className="hidden sm:flex w-full items-center justify-end">
+            <div className="px-[8px] py-[8px] text-md text-white">
+              {navbar === "menu" ? (
+                <div onClick={handleMenu} className="relative">
+                  <i className="fa-solid fa-bars"></i>
+                </div>
+              ) : (
+                <div onClick={handleClose} className="relative">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+              )}
+
+              {navbar && (
+                <div
+                  ref={navbarMobileRef}
+                  className="absolute w-full h-screen bottom-0 left-0 top-[60px] right-0 bg-white"
+                >
+                  <ul></ul>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </nav>
     </div>

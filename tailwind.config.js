@@ -29,7 +29,7 @@ module.exports = {
       yellow: "#FFE193",
       green: "#13ce66",
       "gray-dark": "#273444",
-      gray: "#8492a6",
+      black: "#000",
       "gray-light": "#d3dce6",
     },
     fontSize: {
@@ -71,6 +71,7 @@ module.exports = {
       animation: {
         "scroll-up-navbar": "scrollUpNavbar .6s ease-out",
         "scroll-down-navbar": "scrollDownNavbar 0.3s ease",
+        scale: "scale 0.8s alternate infinite ease-in",
       },
       keyframes: {
         scrollUpNavbar: {
@@ -84,6 +85,13 @@ module.exports = {
             opacity: 1,
           },
           "100%": { transform: "translateY(-100%)", opacity: 0 },
+        },
+        scale: {
+          "0%": {
+            transform: "scale(0.8)",
+            opacity: 0,
+          },
+          "100%": { transform: "scale(1)", opacity: 1 },
         },
       },
     },

@@ -4,10 +4,8 @@ import Content from "./components/Content";
 function App() {
   return (
     <div className="App">
-      <header>
-        <Header />
-        <Content />
-      </header>
+      <Header />
+      <Content />
     </div>
   );
 }
