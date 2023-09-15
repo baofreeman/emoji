@@ -1,14 +1,17 @@
 function Step() {
   return (
-    <div className="relative max-w-full pt-[100px] pb-[150px] sm:pb-[50px] mx-auto my-0 bg-white">
-      <div className="px-[200px] px-[0px]">
+    <div className="relative max-w-full pt-[100px] pt-[50px] pb-[150px] sm:pb-[50px] mx-auto my-0 bg-white">
+      <div className="px-[200px] px-[0px] sm:px-[20px]">
         <h1 className="text-5xl px-[20px] m-auto text-center font-wonderland text-green drop-shadow-3xl">
           How to list your token to EmojiSwap
         </h1>
       </div>
 
       <div className="absolute w-[150px] right-[190px] top-[85px] sm:hidden">
-        <img src="https://www.emojibsc.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTokenImg.8391ac88.png&w=640&q=75" />
+        <img
+          className="w-full h-full object-cover overflow-hidden"
+          src="https://www.emojibsc.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FTokenImg.8391ac88.png&w=640&q=75"
+        />
       </div>
       <div className="absolute w-[500px] max-w-full top-[10%] left-[-14%] hidden">
         <img

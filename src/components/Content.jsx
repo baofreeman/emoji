@@ -3,7 +3,7 @@ import { Footer } from "./index";
 
 function Content() {
   return (
-    <div className="scroll-smooth relative">
+    <div className="scroll-smooth relative m-auto w-full">
       {/* Emoji */}
       <Emoji />
 

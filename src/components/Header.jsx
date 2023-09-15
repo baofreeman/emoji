@@ -87,9 +87,36 @@ function Header() {
               {navbar && (
                 <div
                   ref={navbarMobileRef}
-                  className="absolute w-full h-screen bottom-0 left-0 top-[60px] right-0 bg-white"
+                  className="absolute w-full h-screen bottom-0 left-0 top-[60px] right-0 bg-blue"
                 >
-                  <ul></ul>
+                  <ul className="flex items-center justify-center flex-col m-auto gap-3">
+                    <li className="py-2 px-6 mx-2 text-center my-auto">
+                      <a
+                        className="text-lg font-wonderland text-white"
+                        href="#"
+                      >
+                        About
+                      </a>
+                    </li>
+
+                    <li className="py-2 px-6 mx-2 text-center my-auto">
+                      <a
+                        className="text-lg font-wonderland text-white"
+                        href="#"
+                      >
+                        Tokenomisc
+                      </a>
+                    </li>
+
+                    <li className="py-2 px-6 mx-2 text-center my-auto">
+                      <a
+                        className="text-lg font-wonderland text-white"
+                        href="#"
+                      >
+                        Roadmap
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               )}
             </div>
